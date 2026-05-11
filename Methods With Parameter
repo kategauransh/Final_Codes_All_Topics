@@ -1,0 +1,106 @@
+Programs
+1) Method accepting two integers and returning sum
+class Test {
+
+    int add(int a, int b) {
+
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+
+        Test t = new Test();
+
+        System.out.println(t.add(10,20));
+
+    }
+}
+Output
+30
+2) Method accepting string parameter and returning length
+class Test {
+
+    int length(String str) {
+
+        return str.length();
+    }
+
+    public static void main(String[] args) {
+
+        Test t = new Test();
+
+        System.out.println(t.length("Java"));
+
+    }
+}
+Output
+4
+3) Method accepting array and returning maximum element
+class Test {
+
+    int max(int arr[]) {
+
+        int max = arr[0];
+
+        for(int i=1; i<arr.length; i++) {
+
+            if(arr[i] > max) {
+
+                max = arr[i];
+            }
+        }
+
+        return max;
+    }
+
+    public static void main(String[] args) {
+
+        int a[] = {10,50,30,80};
+
+        Test t = new Test();
+
+        System.out.println(t.max(a));
+
+    }
+}
+Output
+80
+4) Method accepting two numbers and returning larger number
+class Test {
+
+    int largest(int a, int b) {
+
+        if(a > b)
+            return a;
+
+        return b;
+    }
+
+    public static void main(String[] args) {
+
+        Test t = new Test();
+
+        System.out.println(t.largest(10,20));
+
+    }
+}
+Output
+20
+5) Method accepting multiple parameters, performing calculation, and returning result
+class Test {
+
+    double calculate(double a, double b, double c) {
+
+        return (a + b) * c;
+    }
+
+    public static void main(String[] args) {
+
+        Test t = new Test();
+
+        System.out.println(t.calculate(10,20,2));
+
+    }
+}
+Output
+60.0
