@@ -1,1 +1,95 @@
+Programs
+1) Java method with no parameters returning integer value
+class Test {
 
+    int getNumber() {
+
+        return 100;
+    }
+
+    public static void main(String[] args) {
+
+        Test t = new Test();
+
+        System.out.println(t.getNumber());
+
+    }
+}
+Output
+100
+2) Static method taking two numbers and returning their sum
+class Test {
+
+    static int add(int a, int b) {
+
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println(Test.add(10, 20));
+
+    }
+}
+Output
+30
+3) Public method returning string message
+class Test {
+
+    public String message() {
+
+        return "Welcome to Java";
+    }
+
+    public static void main(String[] args) {
+
+        Test t = new Test();
+
+        System.out.println(t.message());
+
+    }
+}
+Output
+Welcome to Java
+4) Method printing message without returning value
+class Test {
+
+    void display() {
+
+        System.out.println("Hello Java");
+
+    }
+
+    public static void main(String[] args) {
+
+        Test t = new Test();
+
+        t.display();
+
+    }
+}
+Important Point
+void
+
+means:
+
+No return value
+5) Method accepting parameters, performing calculation, and returning result
+class Test {
+
+    int multiply(int a, int b) {
+
+        return a * b;
+    }
+
+    public static void main(String[] args) {
+
+        Test t = new Test();
+
+        System.out.println(t.multiply(5, 4));
+
+    }
+}
+Output
+
+20
