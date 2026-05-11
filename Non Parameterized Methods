@@ -1,0 +1,92 @@
+Programs
+1) Non-parameterized method that returns your name
+class Test {
+
+    String getName() {
+
+        return "Gauransh Kate";
+    }
+
+    public static void main(String[] args) {
+
+        Test t = new Test();
+
+        System.out.println(t.getName());
+
+    }
+}
+Output
+Gauransh Kate
+2) Non-parameterized method that returns current year
+class Test {
+
+    int getYear() {
+
+        return 2026;
+    }
+
+    public static void main(String[] args) {
+
+        Test t = new Test();
+
+        System.out.println(t.getYear());
+
+    }
+}
+Output
+2026
+3) Non-parameterized method calculating square of 5
+class Test {
+
+    int square() {
+
+        return 5 * 5;
+    }
+
+    public static void main(String[] args) {
+
+        Test t = new Test();
+
+        System.out.println(t.square());
+
+    }
+}
+Output
+25
+4) Non-parameterized method printing welcome message
+class Test {
+
+    void welcome() {
+
+        System.out.println("Welcome to Java");
+
+    }
+
+    public static void main(String[] args) {
+
+        Test t = new Test();
+
+        t.welcome();
+
+    }
+}
+5) Non-parameterized method returning greeting message based on predefined variable
+class Test {
+
+    String name = "Gauransh";
+
+    String greeting() {
+
+        return "Hello " + name;
+    }
+
+    public static void main(String[] args) {
+
+        Test t = new Test();
+
+        System.out.println(t.greeting());
+
+    }
+}
+Output
+Hello Gauransh
