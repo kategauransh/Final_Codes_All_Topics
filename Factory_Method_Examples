@@ -1,0 +1,164 @@
+Programs
+1) Factory method returning object based on input type
+class Vehicle {
+
+    void type() {
+
+        System.out.println("Vehicle");
+    }
+}
+
+class Car extends Vehicle {
+
+    void type() {
+
+        System.out.println("Car");
+    }
+}
+
+class Bike extends Vehicle {
+
+    void type() {
+
+        System.out.println("Bike");
+    }
+}
+
+class Factory {
+
+    Vehicle getVehicle(String name) {
+
+        if(name.equals("car"))
+            return new Car();
+
+        else
+            return new Bike();
+    }
+}
+
+class Test {
+
+    public static void main(String[] args) {
+
+        Factory f = new Factory();
+
+        Vehicle v = f.getVehicle("car");
+
+        v.type();
+
+    }
+}
+Output
+Car
+2) Factory method creating different shapes
+class Shape {
+
+    void draw() {
+
+    }
+}
+
+class Circle extends Shape {
+
+    void draw() {
+
+        System.out.println("Circle");
+    }
+}
+
+class Rectangle extends Shape {
+
+    void draw() {
+
+        System.out.println("Rectangle");
+    }
+}
+
+class ShapeFactory {
+
+    Shape getShape(String s) {
+
+        if(s.equals("circle"))
+            return new Circle();
+
+        else
+            return new Rectangle();
+    }
+}
+
+class Test {
+
+    public static void main(String[] args) {
+
+        ShapeFactory sf = new ShapeFactory();
+
+        Shape s = sf.getShape("circle");
+
+        s.draw();
+
+    }
+}
+Output
+Circle
+3) Factory method returning subclass object conditionally
+class Animal {
+
+}
+
+class Dog extends Animal {
+
+}
+
+class Cat extends Animal {
+
+}
+
+class Factory {
+
+    Animal getAnimal(boolean flag) {
+
+        if(flag)
+            return new Dog();
+
+        return new Cat();
+    }
+}
+4) Program demonstrating covariant return type
+class A {
+
+}
+
+class B extends A {
+
+}
+
+class Parent {
+
+    A show() {
+
+        return new A();
+    }
+}
+
+class Child extends Parent {
+
+    B show() {
+
+        return new B();
+    }
+}
+5) Factory method returning null if object not found
+class Car {
+
+}
+
+class Factory {
+
+    Car getCar(String name) {
+
+        if(name.equals("BMW"))
+            return new Car();
+
+        return null;
+    }
+}
