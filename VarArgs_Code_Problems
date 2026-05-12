@@ -1,0 +1,100 @@
+Programs
+1) Method using varargs to calculate the sum of numbers
+class Test {
+
+    static int sum(int... nums) {
+        int total = 0;
+
+        for(int n : nums) {
+            total += n;
+        }
+
+        return total;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(sum(10, 20, 30, 40));
+    }
+}
+Output
+100
+2) Method to find the maximum value using varargs
+class Test {
+
+    static int max(int... nums) {
+        int max = nums[0];
+
+        for(int n : nums) {
+            if(n > max) {
+                max = n;
+            }
+        }
+
+        return max;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(max(10, 50, 20, 80, 30));
+    }
+}
+Output
+80
+3) Method to concatenate multiple strings using varargs
+class Test {
+
+    static String concat(String... words) {
+        String result = "";
+
+        for(String s : words) {
+            result += s + " ";
+        }
+
+        return result.trim();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(concat("Java", "is", "powerful"));
+    }
+}
+Output
+Java is powerful
+4) Method to calculate the average of double values using varargs
+class Test {
+
+    static double average(double... nums) {
+        double sum = 0;
+
+        for(double n : nums) {
+            sum += n;
+        }
+
+        return sum / nums.length;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(average(10.5, 20.5, 30.0));
+    }
+}
+Output
+20.333333333333332
+5) Method to count the number of even numbers from varargs input
+class Test {
+
+    static int countEven(int... nums) {
+        int count = 0;
+
+        for(int n : nums) {
+            if(n % 2 == 0) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(countEven(1, 2, 3, 4, 5, 6));
+    }
+}
+Output
+3
