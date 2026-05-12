@@ -1,0 +1,42 @@
+Programs
+1) Program to find maximum and minimum number from command-line arguments
+class Test {    public static void main(String[] args) {        int max = Integer.parseInt(args[0]);        int min = Integer.parseInt(args[0]);        for(int i=1; i<args.length; i++) {            int num = Integer.parseInt(args[i]);            if(num > max)                max = num;            if(num < min)                min = num;        }        System.out.println("Max = " + max);        System.out.println("Min = " + min);    }}
+
+Execution
+java Test 10 50 5 80 20
+
+Output
+Max = 80Min = 5
+
+2) Program reversing command-line arguments
+class Test {    public static void main(String[] args) {        for(int i=args.length-1; i>=0; i--) {            System.out.println(args[i]);        }    }}
+
+Execution
+java Test Java Python C
+
+Output
+CPythonJava
+
+3) Program counting vowels in command-line arguments
+class Test {    public static void main(String[] args) {        int count = 0;        for(String s : args) {            s = s.toLowerCase();            for(int i=0; i<s.length(); i++) {                char ch = s.charAt(i);                if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u') {                    count++;                }            }        }        System.out.println("Vowels = " + count);    }}
+
+Execution
+java Test Java Hello
+
+Output
+Vowels = 4
+
+4) Program checking whether argument exists
+class Test {    public static void main(String[] args) {        String target = "Java";        boolean found = false;        for(String s : args) {            if(s.equals(target)) {                found = true;                break;            }        }        System.out.println(found);    }}
+
+Output
+true
+
+5) Program sorting command-line numbers
+class Test {    public static void main(String[] args) {        int arr[] = new int[args.length];        for(int i=0; i<args.length; i++) {            arr[i] = Integer.parseInt(args[i]);        }        for(int i=0; i<arr.length; i++) {            for(int j=i+1; j<arr.length; j++) {                if(arr[i] > arr[j]) {                    int temp = arr[i];                    arr[i] = arr[j];                    arr[j] = temp;                }            }        }        for(int x : arr) {            System.out.println(x);        }    }}
+
+Execution
+java Test 50 10 80 20
+
+Output
+10205080
