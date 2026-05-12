@@ -1,0 +1,63 @@
+Programs
+1) Program demonstrating overloading of main()
+class Test {
+
+    public static void main(String[] args) {
+
+        System.out.println("Original Main");
+
+        main(10);
+    }
+
+    public static void main(int x) {
+
+        System.out.println(x);
+    }
+}
+2) Program calling one class main from another class
+class A {
+
+    public static void main(String[] args) {
+
+        System.out.println("Class A");
+    }
+}
+
+class B {
+
+    public static void main(String[] args) {
+
+        A.main(args);
+    }
+}
+3) Recursive main() with base case
+class Test {
+
+    static int i = 1;
+
+    public static void main(String[] args) {
+
+        System.out.println(i);
+
+        i++;
+
+        if(i <= 5)
+            main(args);
+    }
+}
+4) Multiple classes having main()
+class A {
+
+    public static void main(String[] args) {
+
+        System.out.println("Main A");
+    }
+}
+
+class B {
+
+    public static void main(String[] args) {
+
+        System.out.println("Main B");
+    }
+}
